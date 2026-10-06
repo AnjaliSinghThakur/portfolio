@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anjali Singh Thakur — Data Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060918;--ink:#eef2ff;--mute:#b4bfdc;--teal:#2dd4bf;--amber:#fbbf24;--vio:#8b5cf6;--card:rgba(14,20,48,.6);--line:rgba(255,255,255,.13);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+main,nav,footer{position:relative;z-index:2}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;z-index:9;background:linear-gradient(90deg,var(--teal),var(--vio),var(--amber))}
+#cur{position:fixed;left:0;top:0;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(45,212,191,.13),transparent 65%)}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;backdrop-filter:blur(14px);background:linear-gradient(var(--bg),transparent)}
+nav b{font:800 18px Sora,sans-serif}nav div{display:flex;gap:22px;font-size:15px}
+nav a{color:var(--mute);text-decoration:none;transition:.2s}nav a:hover,nav a.on{color:var(--teal)}
+section{min-height:100vh;padding:120px 6vw 80px;max-width:1200px;margin:auto;display:flex;flex-direction:column;justify-content:center}
+h1{font:800 clamp(46px,9vw,118px)/.98 Sora,sans-serif;letter-spacing:-.04em}
+h1 .ch{display:inline-block;opacity:0;transform:translateY(60px) rotateX(-70deg);animation:in .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.g{background:linear-gradient(100deg,var(--teal),var(--vio) 60%,var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font:700 clamp(30px,4.5vw,54px)/1.1 Sora,sans-serif;letter-spacing:-.02em;margin-bottom:12px}
+.role{font:500 clamp(20px,3vw,30px) Sora,sans-serif;margin-top:22px;min-height:1.4em;color:var(--amber)}
+.role::after{content:"|";margin-left:3px;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.sub{color:var(--mute);max-width:600px;margin:18px 0 30px;font-size:19px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:999px;font:500 16px 'DM Sans';text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--card);backdrop-filter:blur(10px);transition:box-shadow .25s,transform .15s;display:inline-block;cursor:pointer}
+.btn.p{background:linear-gradient(100deg,var(--teal),var(--vio));border:0;color:#04101a;font-weight:700}
+.btn:hover{box-shadow:0 12px 30px -8px var(--teal)}
+.stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:44px}
+.st{padding:18px 26px;border-radius:18px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(12px);min-width:140px}
+.st b{font:800 38px Sora;color:var(--teal);display:block;line-height:1.1}.st span{color:var(--mute);font-size:14px}
+.mq{overflow:hidden;white-space:nowrap;border-block:1px solid var(--line);padding:14px 0;margin-top:40px;mask:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}
+.mq div{display:inline-block;animation:mq 28s linear infinite;font:700 22px Sora;color:var(--mute)}
+.mq span{margin:0 26px}.mq span:nth-child(3n){color:var(--teal)}.mq span:nth-child(3n+1){color:var(--vio)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 8px}
+.fl button{padding:9px 20px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 15px 'DM Sans';cursor:pointer;transition:.2s}
+.fl button.on{background:var(--teal);color:#04101a;border-color:var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:20px;perspective:1200px}
+.card{position:relative;padding:30px;border-radius:22px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(16px);text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:14px;transition:transform .2s,border-color .3s,opacity .4s;overflow:hidden}
+.card.h{display:none}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(45,212,191,.2),transparent 60%);opacity:0;transition:.3s}
+.card:hover{border-color:var(--teal)}.card:hover::before{opacity:1}
+.card h3{font:700 22px Sora,sans-serif}.card p{color:var(--mute);font-size:16px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:8px}.tags i{font-style:normal;font-size:13px;padding:4px 12px;border-radius:999px;background:rgba(139,92,246,.22)}
+.go{color:var(--teal);font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+#cloud{position:relative;height:min(460px,80vw);perspective:900px}
+#cloud span{position:absolute;left:50%;top:50%;font:700 18px Sora;white-space:nowrap;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);transform:translate(-50%,-50%)}
+.tl{position:relative;margin-top:30px;padding-left:30px;border-left:2px solid var(--line)}
+.ti{position:relative;padding:24px 28px;margin-bottom:22px;border-radius:20px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(14px)}
+.ti::before{content:"";position:absolute;left:-39px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--teal);box-shadow:0 0 18px var(--teal)}
+.ti time{color:var(--amber);font:500 14px Sora}.ti h3{font:700 21px Sora;margin:4px 0 2px}.ti em{color:var(--mute);font-size:15px}
+.ti ul{margin:12px 0 0 18px;color:var(--mute);font-size:16px}.ti li{margin-bottom:6px}
+.sh{font:700 20px Sora;color:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.chips span{padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:15px}
+.rv{opacity:0;transform:translateY(40px) rotateX(8deg);transition:opacity .8s,transform .8s}.rv.on{opacity:1;transform:none}
+footer{text-align:center;padding:30px;color:var(--mute);font-size:14px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+@media(max-width:760px){.two{grid-template-columns:1fr}nav div{gap:12px;font-size:13px}section{padding-top:100px}#cur{display:none}}
+@media(prefers-reduced-motion:reduce){.rv,h1 .ch{transition:none;animation:none;opacity:1;transform:none}.mq div{animation:none}}
+</style></head><body>
+<div id="pg"></div><div id="cur"></div><canvas id="bg" aria-hidden="true"></canvas>
+<nav><b>AST.</b><div><a href="#top">Home</a><a href="#journey">Journey</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section id="top">
+ <h1 id="nm">Anjali Singh <span class="g">Thakur</span></h1>
+ <div class="role" id="role"></div>
+ <p class="sub">Data Analyst | Business Intelligence | Data Analytics &amp; Reporting. B.Tech in Computer Science, Cisco CCNA certified, with hands-on work in data cleaning, EDA, dashboards and KPI reporting.</p>
+ <div class="btns"><a class="btn p mg" href="#projects">View projects</a><a class="btn mg" href="https://github.com/AnjaliSinghThakur" target="_blank" rel="noopener">GitHub profile</a></div>
+ <div class="stats"><div class="st"><b data-n="5">0</b><span>Projects</span></div><div class="st"><b>8.15</b><span>B.Tech CGPA</span></div><div class="st"><b>497K+</b><span>Rows analysed</span></div><div class="st"><b>0.80</b><span>Churn model F1-score</span></div></div>
+ <div class="mq"><div id="mq"></div></div>
+</section>
+<section id="journey">
+ <h2 class="rv">Experience &amp; education</h2>
+ <div class="tl">
+  <div class="ti rv"><time>Jun 2026 – Present</time><h3>Data Analysis Intern</h3><em>Codveda Technologies, Chandrapur</em><ul><li>Analysing datasets to find patterns, trends and anomalies, and validating data integrity across sources for accurate reporting.</li><li>Completed structured tasks in data cleaning, EDA, regression, clustering and classification using Python, SQL and visualization tools.</li></ul></div>
+  <div class="ti rv"><time>Aug 2025 – Mar 2026</time><h3>Data Analyst Intern</h3><em>Prime Step Institute</em><ul><li>Data cleaning, preprocessing and EDA with Python, SQL and Excel. Built Power BI and Tableau dashboards and automated recurring reports.</li><li>Awarded a Certificate of Excellence for outstanding practical training in Data Analytics.</li></ul></div>
+  <div class="ti rv"><time>Nov 2021 – Jun 2025</time><h3>B.Tech, Computer Science Engineering</h3><em>IoT, Cyber Security &amp; Blockchain Technology. Gyan Ganga Institute of Technology and Sciences, Jabalpur</em><ul><li>CGPA 8.15 / 10. 12th: 68.2% (2021). 10th: 62.8% (2019). Both CBSE.</li></ul></div>
+ </div>
+ <div class="two" style="margin-top:36px;align-items:start">
+  <div class="rv"><h3 class="sh">Certifications</h3><div class="chips"><span>Cisco CCNA 1 &amp; 2</span><span>Cisco CCNA Enterprise (Security &amp; Automation)</span><span>PCAP: Python Essentials</span><span>Certificate of Excellence, Prime Step Institute</span></div></div>
+  <div class="rv"><h3 class="sh">Leadership</h3><p class="sub" style="margin:8px 0 0;font-size:16px">Team Leader of an IoT Smart Project: led a cross-functional team to deliver on time, and organised campus-wide cybersecurity and blockchain sessions.</p></div>
+ </div>
+</section>
+<section id="projects">
+ <h2 class="rv">Projects</h2>
+ <p class="sub rv" style="margin:0">Filter by tool and open any card to see the code.</p>
+ <div class="fl rv" id="fl"><button class="on" data-f="all">All</button><button data-f="Python">Python</button><button data-f="SQL">SQL</button><button data-f="Power BI">Power BI</button><button data-f="ML">Machine Learning</button></div>
+ <div class="grid">
+  <a class="card rv" data-t="Python,ML" href="https://github.com/AnjaliSinghThakur/codveda-data-analytics-internship" target="_blank" rel="noopener"><h3>Codveda Internship Project</h3><p>Completed 6 end-to-end tasks (data cleaning, EDA, regression, clustering, classification, NLP) on a 497,000+ row real-world stock prices dataset.</p><div class="tags"><i>Python</i><i>Pandas</i><i>Scikit-learn</i></div><span class="go">View on GitHub</span></a>
+  <a class="card rv" data-t="Python,ML" href="https://github.com/AnjaliSinghThakur/customer-churn-prediction" target="_blank" rel="noopener"><h3>Telecom Churn Prediction (ML)</h3><p>Built and tuned Logistic Regression, Decision Tree and Random Forest classifiers (F1-score 0.80) and found key churn drivers through feature importance.</p><div class="tags"><i>Python</i><i>Scikit-learn</i><i>GridSearchCV</i></div><span class="go">View on GitHub</span></a>
+  <a class="card rv" data-t="SQL,Python" href="https://github.com/AnjaliSinghThakur/telco-customer-churn-analysis" target="_blank" rel="noopener"><h3>Telco Churn Analysis (SQL)</h3><p>Analysed 7,032 telecom records with SQL. The month-to-month + fiber-optic + no-tech-support segment churns at 57.52%.</p><div class="tags"><i>SQL</i><i>SQLite</i><i>Matplotlib</i></div><span class="go">View on GitHub</span></a>
+  <a class="card rv" data-t="Python,Power BI" href="https://github.com/AnjaliSinghThakur/hotel-booking-analysis" target="_blank" rel="noopener"><h3>Hotel Booking Cancellation</h3><p>Exploratory analysis of hotel bookings and a Power BI dashboard showing cancellation trends and drivers.</p><div class="tags"><i>Python</i><i>EDA</i><i>Power BI</i></div><span class="go">View on GitHub</span></a>
+  <a class="card rv" data-t="SQL,Power BI" href="https://github.com/AnjaliSinghThakur/superstore-sales-analysis" target="_blank" rel="noopener"><h3>Superstore Sales Analysis</h3><p>Retail sales analysis with SQL and interactive Power BI dashboards tracking revenue, profit and category performance.</p><div class="tags"><i>SQL</i><i>Power BI</i></div><span class="go">View on GitHub</span></a>
+ </div>
+</section>
+<section id="skills">
+ <div class="two"><div><h2 class="rv">Toolkit</h2><p class="sub rv">Python (Pandas, NumPy, Matplotlib, Seaborn) and SQL (MySQL) for analysis, Power BI, Tableau and advanced Excel for reporting, and Jupyter, Google Colab and GitHub for daily work. Move your mouse over the sphere to spin it.</p></div><div id="cloud" class="rv"></div></div>
+</section>
+<section id="contact">
+ <h2 class="rv">Let's work together</h2>
+ <p class="sub rv">Connect with me on LinkedIn or see my code on GitHub.</p>
+ <div class="btns rv"><a class="btn p mg" href="https://linkedin.com/in/anjali-singh-thakur-55103743a" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn mg" href="https://github.com/AnjaliSinghThakur" target="_blank" rel="noopener">Open GitHub</a></div>
+</section>
+</main>
+<footer>© 2026 Anjali Singh Thakur</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// split name letters
+var nm=$('#nm'),d=0;(function sp(n){[].slice.call(n.childNodes).forEach(function(c){if(c.nodeType===3){var f=document.createDocumentFragment();c.textContent.split('').forEach(function(ch){if(ch===' '){f.appendChild(document.createTextNode(' '))}else{var s=document.createElement('span');s.className='ch';s.textContent=ch;s.style.animationDelay=(d+=.05)+'s';f.appendChild(s)}});n.replaceChild(f,c)}else sp(c)})})(nm);
+// typed roles
+var roles=['Data Analyst','Dashboard Builder','Python & SQL Explorer','Business Intelligence Analyst'],ri=0,ci=0,del=false,re=$('#role');
+(function ty(){var w=roles[ri];re.textContent=w.slice(0,ci);if(!del&&ci===w.length){del=true;return setTimeout(ty,1400)}if(del&&ci===0){del=false;ri=(ri+1)%roles.length}ci+=del?-1:1;setTimeout(ty,del?35:75)})();
+// marquee
+var tk=['Python','SQL','Power BI','Tableau','Excel','Scikit-learn','Cisco CCNA','KPI Reporting'],h='';for(var i=0;i<2;i++)tk.forEach(function(t){h+='<span>'+t+'</span>'});$('#mq').innerHTML=h+h;
+// reveal + counters
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});$$('.rv').forEach(function(e){io.observe(e)});
+$$('[data-n]').forEach(function(b){var n=+b.dataset.n,i=0;var t=setInterval(function(){b.textContent=++i;if(i>=n)clearInterval(t)},320)});
+// filters
+$$('#fl button').forEach(function(b){b.onclick=function(){$$('#fl button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');$$('.card').forEach(function(c){c.classList.toggle('h',b.dataset.f!=='all'&&c.dataset.t.indexOf(b.dataset.f)<0)})}});
+// tilt + spotlight + magnetic
+$$('.card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');c.style.transform='rotateY('+((x-.5)*12)+'deg) rotateX('+((.5-y)*12)+'deg) translateZ(8px)'});c.addEventListener('mouseleave',function(){c.style.transform=''})});
+$$('.mg').forEach(function(b){b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.2)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)'});b.addEventListener('mouseleave',function(){b.style.transform=''})});
+// cursor, progress, nav highlight
+var cur=$('#cur'),mx=0,my=0;addEventListener('mousemove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;cur.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)'});
+var secs=$$('section'),links=$$('nav a');
+// skill sphere
+var words=['Python','SQL','Power BI','Tableau','Excel','Pandas','NumPy','Scikit-learn','MySQL','EDA','Data Cleaning','KPI Reporting'],cl=$('#cloud'),el=[],pt=[];
+words.forEach(function(w,i){var s=document.createElement('span');s.textContent=w;cl.appendChild(s);el.push(s);var y=1-(i/(words.length-1))*2,r=Math.sqrt(1-y*y),a=i*2.399963;pt.push([Math.cos(a)*r,y,Math.sin(a)*r])});
+var ax=.004,ay=.006,cm=false;cl.addEventListener('mousemove',function(e){var r=cl.getBoundingClientRect();ay=((e.clientX-r.left)/r.width-.5)*.04;ax=((e.clientY-r.top)/r.height-.5)*-.04;cm=true});cl.addEventListener('mouseleave',function(){ax=.004;ay=.006});
+function sph(){var R=cl.clientWidth*.36,ca=Math.cos(ax),sa=Math.sin(ax),cb=Math.cos(ay),sb=Math.sin(ay);pt.forEach(function(p,i){var y=p[1]*ca-p[2]*sa,z=p[1]*sa+p[2]*ca,x=p[0]*cb+z*sb;z=-p[0]*sb+z*cb;p[0]=x;p[1]=y;p[2]=z;var s=(z+2)/3;el[i].style.transform='translate(calc(-50% + '+x*R+'px),calc(-50% + '+y*R+'px)) scale('+(.65+s*.55)+')';el[i].style.opacity=.35+s*.65;el[i].style.zIndex=Math.round(z*10+10);el[i].style.color=z>0?'#2dd4bf':'#eef2ff'})}
+// three.js
+if(!window.THREE){return}
+var cv=$('#bg'),R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(60,1,.1,300);
+// wave field
+var W=70,wp=new Float32Array(W*W*3),k=0;for(var i=0;i<W;i++)for(var j=0;j<W;j++){wp[k++]=(i-W/2)*1.1;wp[k++]=0;wp[k++]=(j-W/2)*1.1}
+var wg=new THREE.BufferGeometry();wg.setAttribute('position',new THREE.BufferAttribute(wp,3));
+var wm=new THREE.PointsMaterial({color:0x2dd4bf,size:.13,transparent:true,opacity:.75,blending:THREE.AdditiveBlending,depthWrite:false});
+var wave=new THREE.Points(wg,wm);wave.position.y=-4;S.add(wave);
+// bars
+var N=9,bars=[],bg=new THREE.BoxGeometry(.8,1,.8),grp=new THREE.Group();grp.position.set(0,-2,-6);S.add(grp);
+for(i=0;i<N;i++)for(j=0;j<N;j++){var m=new THREE.Mesh(bg,new THREE.MeshBasicMaterial({color:0x2dd4bf,transparent:true,opacity:.5}));m.position.set((i-N/2)*1.8,0,(j-N/2)*1.8);m.userData={p:Math.random()*6,a:1+Math.random()*3,h:i/N};m.add(new THREE.LineSegments(new THREE.EdgesGeometry(bg),new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.35})));grp.add(m);bars.push(m)}
+// stars + connecting nodes
+var sn=500,sp2=new Float32Array(sn*3);for(i=0;i<sn*3;i++)sp2[i]=(Math.random()-.5)*90;
+var sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.BufferAttribute(sp2,3));
+var stars=new THREE.Points(sg,new THREE.PointsMaterial({color:0xffffff,size:.1,transparent:true,opacity:.7}));S.add(stars);
+// orbiting rings
+var rg=new THREE.Group();[5,7.5,10].forEach(function(r,i){var t=new THREE.Mesh(new THREE.TorusGeometry(r,.015,6,120),new THREE.MeshBasicMaterial({color:[0x8b5cf6,0x2dd4bf,0xfbbf24][i],transparent:true,opacity:.5}));t.rotation.x=1.2+i*.4;t.rotation.y=i*.7;rg.add(t);var b=new THREE.Mesh(new THREE.SphereGeometry(.18,12,12),new THREE.MeshBasicMaterial({color:[0x8b5cf6,0x2dd4bf,0xfbbf24][i]}));b.userData={r:r,s:.5+i*.25,o:i};t.add(b)});rg.position.set(0,2,-8);S.add(rg);
+function rs(){R.setSize(innerWidth,innerHeight,false);C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix()}addEventListener('resize',rs);rs();
+// camera path through sections
+var KP=[[0,5,20,0,1,0],[10,3,10,0,0,-4],[-10,9,6,0,0,-6],[0,16,12,0,-2,-4],[0,3,14,0,2,-8]],HU=[.5,.62,.75,.9,.55];
+function lerp(a,b,t){return a+(b-a)*t}
+var sy=0;
+function loop(t){t*=.001;
+ var mxs=document.body.scrollHeight-innerHeight||1,ts=scrollY/mxs;sy+=(ts-sy)*.06;
+ var f=sy*(KP.length-1),i0=Math.min(Math.floor(f),KP.length-2),u=f-i0;u=u*u*(3-2*u);var a=KP[i0],b=KP[i0+1];
+ C.position.set(lerp(a[0],b[0],u)+mx*3,lerp(a[1],b[1],u)-my*2,lerp(a[2],b[2],u));C.lookAt(lerp(a[3],b[3],u),lerp(a[4],b[4],u),lerp(a[5],b[5],u));
+ var hue=lerp(HU[i0],HU[i0+1],u);wm.color.setHSL(hue,.8,.55);
+ var q=0;for(var i=0;i<W;i++)for(var j=0;j<W;j++){wp[q+1]=reduce?0:Math.sin(i*.35+t*1.2)*.9+Math.cos(j*.3+t*.9)*.9+Math.sin((i+j)*.2+t+sy*8)*.6;q+=3}wg.attributes.position.needsUpdate=true;
+ bars.forEach(function(m){var d=m.userData,h=reduce?2:1+Math.abs(Math.sin(t*.8+d.p+sy*8))*d.a*(1+sy*1.5);m.scale.y=h;m.position.y=h/2;m.material.color.setHSL((hue+d.h*.25)%1,.8,.55)});
+ grp.rotation.y=t*.05+sy*3;stars.rotation.y=t*.01+sy;rg.rotation.y=t*.1;rg.rotation.z=sy*2;
+ rg.children.forEach(function(r){var b=r.children[0],d=b.userData,an=t*d.s+d.o;b.position.set(Math.cos(an)*d.r,Math.sin(an)*d.r,0)});
+ document.getElementById('pg').style.width=sy*100+'%';
+ sph();R.render(S,C);requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+addEventListener('scroll',function(){var p=scrollY+innerHeight*.4;secs.forEach(function(s,i){if(p>=s.offsetTop&&p<s.offsetTop+s.offsetHeight)links.forEach(function(l,k){l.classList.toggle('on',k===i)})})},{passive:true});
+})();
+</script></body></html>
